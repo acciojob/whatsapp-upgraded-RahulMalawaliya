@@ -21,11 +21,13 @@ public class WhatsappController {
 
     //Autowire will not work in this case, no need to change this and add autowire
     WhatsappService whatsappService = new WhatsappService();
+    
 
     @PostMapping("/add-user")
     public String createUser(String name, String mobile) throws Exception {
         //If the mobile number exists in database, throw "User already exists" exception
         //Otherwise, create the user and return "SUCCESS"
+    	
 
         return whatsappService.createUser(name, mobile);
     }
@@ -48,6 +50,7 @@ public class WhatsappController {
     public int createMessage(String content){
         // The 'i^th' created message has message id 'i'.
         // Return the message id.
+    	
 
         return whatsappService.createMessage(content);
     }
