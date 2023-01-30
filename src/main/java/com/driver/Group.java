@@ -23,12 +23,10 @@ public class Group {
 		this.numberOfParticipants = numberOfParticipants;
 	}
 	
-	public Group(String name, int numberOfParticipants, User admin) {
-		super();
-		this.name = name;
-		this.numberOfParticipants = numberOfParticipants;
-		Admin = admin;
-	}
+    public Group(String name,int numberOfParticipants){
+        setName(name);
+        setNumberOfParticipants(numberOfParticipants);
+    }
 	public Group() {
 		super();
 		// TODO Auto-generated constructor stub
